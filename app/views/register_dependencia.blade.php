@@ -6,7 +6,7 @@
 
 	<div class="row text-center">
 
-		<h1>Datos del nuevo Móvil</h1>
+		<h1>Datos de la nueva Dependencia</h1>
 
 		<div class="col-md-10 col-md-offset-1 text-left">
 			@if ($errors->any())
@@ -20,7 +20,7 @@
 			      </ul>
 			    </div>
 			@endif
-			<form action="{{ URL::asset('register_movil') }}" method="POST" class="form-vertical" role="form">
+			<form action="{{ URL::asset('register_dependencia') }}" method="POST" class="form-vertical" role="form">
 
 				<fieldset class="cool-fieldset">
 					<div class="form-group">
