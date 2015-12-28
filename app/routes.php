@@ -20,16 +20,23 @@ Route::get('lista_usuarios', 'UsuariosController@all_users');
 
 //Moviles
 Route::get('register_movil', 'MovilesController@get_nuevo');
+Route::post('register_movil', 'MovilesController@post_nuevo');
+Route::get('lista_moviles', 'MovilesController@all_moviles');
 
 //Equipos AVL
 Route::get('register_avl', 'EquiposAVLController@get_nuevo');
+Route::post('register_avl', 'EquiposAVLController@post_nuevo');
+Route::get('lista_avls', 'EquiposAVLController@all_avls');
 
 //Dependencias
 Route::get('register_dependencia', 'DependenciasController@get_nuevo');
+Route::post('register_dependencia', 'DependenciasController@post_nuevo');
+Route::get('lista_dependencias', 'DependenciasController@all_dependencias');
 
 //Eqipos Radio
 Route::get('register_radio', 'EquiposRadioController@get_nuevo');
-
+Route::post('register_radio', 'EquiposRadioController@post_nuevo');
+Route::get('lista_radios', 'EquiposRadioController@all_radios');
 
 
 /*Rutas privadas solo para usuarios autenticados*/

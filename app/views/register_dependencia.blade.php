@@ -25,31 +25,26 @@
 				<fieldset class="cool-fieldset">
 					<div class="form-group">
 						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>RO: </small></p>
-			  				<input type="text" class="form-control" placeholder="Ingrese RO..." name="ro" id="ro" value="{{ Input::old('ro') }}">
+			  				<p class="help-block margin-bottom-cero"><small>Nombre: </small></p>
+			  				<input type="text" class="form-control" placeholder="Nombre..." name="nombre" id="nombre" value="{{ Input::old('nombre') }}">
 				  		</div>
 
 						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>OI: </small></p>
-			  				<input type="text" class="form-control" placeholder="Ingrese OI..." name="oi" id="oi" value="{{ Input::old('oi') }}">
+			  				<p class="help-block margin-bottom-cero"><small>Dirección: </small></p>
+			  				<input type="text" class="form-control" placeholder="Dirección..." name="direccion" id="direccion" value="{{ Input::old('direccion') }}">
 				  		</div>		  			
 				  	</div>
 
 				  	<div class="form-group">
-						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>Dominio: </small></p>
-			  				<input type="text" class="form-control" placeholder="Dominio..." name="dominio" id="dominio" value="{{ Input::old('dominio') }}">
+						<div class="col-sm-12">
+			  				<p class="help-block margin-bottom-cero"><small>Teléfono: </small></p>
+			  				<input type="text" class="form-control" placeholder="Teléfono..." name="telefono" id="telefono" value="{{ Input::old('telefono') }}">
 				  		</div>
-
-						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>Modelo: </small></p>
-			  				<input type="text" class="form-control" placeholder="Modelo..." name="modelo" id="modelo" value="{{ Input::old('modelo') }}">
-				  		</div>	  			
 				  	</div>
 
 					<div class="form-group">					
 							<div class="col-sm-12">
-								<input type="submit" value="Registrar Móvil" class="btn btn-success form-control">
+								<input type="submit" value="Registrar Dependencia" class="btn btn-success form-control">
 							</div>
 					</div>							  	
 

@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'final',
+			'database'  => 'policia',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

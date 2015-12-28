@@ -25,31 +25,19 @@
 				<fieldset class="cool-fieldset">
 					<div class="form-group">
 						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>RO: </small></p>
-			  				<input type="text" class="form-control" placeholder="Ingrese RO..." name="ro" id="ro" value="{{ Input::old('ro') }}">
+			  				<p class="help-block margin-bottom-cero"><small>Serie: </small></p>
+			  				<input type="text" class="form-control" placeholder="Serie..." name="serie" id="serie" value="{{ Input::old('serie') }}">
 				  		</div>
 
 						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>OI: </small></p>
-			  				<input type="text" class="form-control" placeholder="Ingrese OI..." name="oi" id="oi" value="{{ Input::old('oi') }}">
+			  				<p class="help-block margin-bottom-cero"><small>Datatrack: </small></p>
+			  				<input type="text" class="form-control" placeholder="Datatrack..." name="datatrack" id="datatrack" value="{{ Input::old('oi') }}">
 				  		</div>		  			
-				  	</div>
-
-				  	<div class="form-group">
-						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>Dominio: </small></p>
-			  				<input type="text" class="form-control" placeholder="Dominio..." name="dominio" id="dominio" value="{{ Input::old('dominio') }}">
-				  		</div>
-
-						<div class="col-sm-6">
-			  				<p class="help-block margin-bottom-cero"><small>Modelo: </small></p>
-			  				<input type="text" class="form-control" placeholder="Modelo..." name="modelo" id="modelo" value="{{ Input::old('modelo') }}">
-				  		</div>	  			
 				  	</div>
 
 					<div class="form-group">					
 							<div class="col-sm-12">
-								<input type="submit" value="Registrar Móvil" class="btn btn-success form-control">
+								<input type="submit" value="Registrar AVL" class="btn btn-success form-control">
 							</div>
 					</div>							  	
 
