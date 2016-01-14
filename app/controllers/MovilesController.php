@@ -2,7 +2,8 @@
 	class MovilesController extends BaseController {
 
 	public function get_nuevo(){
-		return View::make('register_movil');
+		$modelos = ModeloMovil::all();
+		return View::make('register_movil')->with('modelos', $modelos);
 	}
 	public function post_nuevo() {
 		$inputs = Input::all();
@@ -34,7 +35,6 @@
 	}
 	public function all_moviles() {
 		$moviles = Movil::all();
-		return View::make('lista_moviles')->with('moviles', $moviles);
-		
+		return View::make('lista_moviles')->with('moviles', $moviles);		
 	}
 }

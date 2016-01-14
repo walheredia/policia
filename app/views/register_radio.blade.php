@@ -38,9 +38,15 @@
 				  	<div class="form-group">
 
 						<div class="col-sm-12">
-			  				<p class="help-block margin-bottom-cero"><small>Modelo: </small></p>
-			  				<input type="text" class="form-control" placeholder="Modelo..." name="modelo" id="modelo" value="{{ Input::old('modelo') }}">
-				  		</div>	  			
+							<p class="help-block margin-bottom-cero"><small>Modelo:</small></p>
+			  				<select class="form-control campo" name="modelo" id="modelo" data-val="modelo">
+			  					<option value="" selected disabled>Por favor, seleccione</option>
+			  					@foreach ($modelos as $modelo)
+		                          <option value="{{ $modelo->id }}">{{ $modelo->modelo }}</option>
+		                        @endforeach
+		                    </select>
+	                   	</div>
+
 				  	</div>
 
 					<div class="form-group">					

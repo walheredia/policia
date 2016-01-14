@@ -2,7 +2,8 @@
 	class EquiposRadioController extends BaseController {
 
 	public function get_nuevo(){
-		return View::make('register_radio');
+		$modelos = ModeloRadio::all();
+		return View::make('register_radio')->with('modelos', $modelos);
 	}
 	public function post_nuevo() {
 		$inputs = Input::all();
