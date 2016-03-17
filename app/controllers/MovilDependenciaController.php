@@ -3,7 +3,9 @@
 
 	public function get_nuevo(){
 		$dependencias = Dependencia::all();
-		return View::make('register_movil_dependencia')->with('dependencias', $dependencias);
+		$moviles = movil::all();
+		return View::make('register_movil_dependencia')->with('dependencias', $dependencias)
+														->with('moviles', $moviles);
 	}
 
 	public function post_nuevo(){

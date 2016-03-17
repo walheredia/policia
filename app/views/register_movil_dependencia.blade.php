@@ -26,7 +26,7 @@
 					<div class="form-group">
 						<div class="col-sm-6">
 							<p class="help-block margin-bottom-cero"><small>Dependencia:</small></p>
-			  				<select class="form-control campo" name="modelo" id="modelo" data-val="modelo">
+			  				<select class="form-control campo" name="dependencia" id="dependencia" data-val="dependencia">
 			  					<option value="" selected disabled>Por favor, seleccione</option>
 			  					@foreach ($dependencias as $dependencia)
 		                          <option value="{{ $dependencia->id_dependencia }}">{{ $dependencia->nombre." ".$dependencia->direccion }}</option>
@@ -34,27 +34,19 @@
 		                    </select>
 	                   	</div>
 	                   	<div class="col-sm-6">
-							<p class="help-block margin-bottom-cero"><small>Dependencia:</small></p>
-			  				<select class="form-control campo" name="modelo" id="modelo" data-val="modelo">
+							<p class="help-block margin-bottom-cero"><small>Móvil:</small></p>
+			  				<select class="form-control campo" name="movil" id="movil" data-val="movil">
 			  					<option value="" selected disabled>Por favor, seleccione</option>
-			  					@foreach ($dependencias as $dependencia)
-		                          <option value="{{ $dependencia->id_dependencia }}">{{ $dependencia->nombre." ".$dependencia->direccion }}</option>
+			  					@foreach ($moviles as $movil)
+		                          <option value="{{ $movil->id_movil }}">{{ $movil->dominio." ".$movil->modelo }}</option>
 		                        @endforeach
 		                    </select>
 	                   	</div>		  			
 				  	</div>
-
-				  	<div class="form-group">
-						<div class="col-sm-12">
-			  				<p class="help-block margin-bottom-cero"><small>Teléfono: </small></p>
-			  				<input type="text" class="form-control" placeholder="Teléfono..." name="telefono" id="telefono" value="{{ Input::old('telefono') }}">
-				  		</div>
-				  	</div>
-
 					<div class="form-group">					
-							<div class="col-sm-12">
-								<input type="submit" value="Registrar Dependencia" class="btn btn-success form-control">
-							</div>
+						<div class="col-sm-12">
+							<input type="submit" value="Registrar Asignación" class="btn btn-success form-control">
+						</div>
 					</div>							  	
 
 				</fieldset>					
