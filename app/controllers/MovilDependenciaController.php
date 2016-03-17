@@ -43,7 +43,12 @@
 
 	        $dependencias = Dependencia::all();
 			$moviles = Movil::all();
-			$movildependencias = MovilDependencia::all();
+			$movildependencias = DB::table('dependencias_moviles')
+			->join('dependencias', 'dependencias_moviles.id_dependencia', '=', 'dependencias.id_dependencia')
+			->join('moviles', 'dependencias_moviles.id_movil', '=', 'moviles.id_movil')
+			->select('dependencias.id_dependencia', 'moviles.id_movil')
+			->orderby('dependencias.id_dependencia', 'asc')
+			->get();
 			return View::make('register_movil_dependencia')->with('ok', 'La Asignación ha sido registrada con Éxito')
 														->with('dependencias', $dependencias)
 														->with('moviles', $moviles)
