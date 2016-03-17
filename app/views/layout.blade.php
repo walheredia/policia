@@ -39,6 +39,7 @@
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Dependencias <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			        	<li><a href="{{ URL::asset('register_dependencia') }}">Alta</a></li>
+			        	<li><a href="{{ URL::asset('register_movil_dependencia') }}">Asignar Móviles</a></li>
 			        	<li><a href="{{ URL::asset('lista_dependencias') }}">Listar</a></li>						
 			        </ul>
 		      	</li>

@@ -38,6 +38,9 @@ Route::get('register_radio', 'EquiposRadioController@get_nuevo');
 Route::post('register_radio', 'EquiposRadioController@post_nuevo');
 Route::get('lista_radios', 'EquiposRadioController@all_radios');
 
+Route::get('register_movil_dependencia', 'MovilDependenciaController@get_nuevo');
+Route::post('register_movil_dependencia', 'MovilDependenciaController@post_nuevo');
+
 
 /*Rutas privadas solo para usuarios autenticados*/
 Route::group(['before' => 'auth'], function()

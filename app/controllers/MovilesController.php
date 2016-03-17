@@ -3,7 +3,11 @@
 
 	public function get_nuevo(){
 		$modelos = ModeloMovil::all();
-		return View::make('register_movil')->with('modelos', $modelos);
+		$radios = Radio::all();
+		$avls = AVL::all();
+		return View::make('register_movil')->with('modelos', $modelos)
+											->with('radios', $radios)
+											->with('avls', $avls);
 	}
 	public function post_nuevo() {
 		$inputs = Input::all();
@@ -12,6 +16,8 @@
 			'oi' => 'required|max:50',
 			'dominio' => 'required|max:50',
 			'modelo' => 'required|max:50',
+			'radio' => 'required',
+			'avl' => 'required',
 		);
 		$mensajes = array(
 			'required' => 'Campo Obligatorio',
@@ -29,6 +35,8 @@
 			$movil->oi = Input::get('oi');
 			$movil->dominio = Input::get('dominio');
 			$movil->modelo = Input::get('modelo');
+			$movil->id_radio = Input::get('radio');
+			$movil->id_avl = Input::get('avl');
 	        $movil->save();
 			return Redirect::to('lista_moviles')->with('error', 'El Móvil ha sido registrado con Éxito')->withInput();
 		}

@@ -51,6 +51,34 @@
 	                   	</div>	  			
 				  	</div>
 
+				  	<div class="form-group">
+				  		<div class="col-sm-6">
+				  			<p class="help-block margin-bottom-cero"><small>Eq. Radio:</small></p>
+			  				<select class="form-control campo" name="radio" id="radio" data-val="radio">
+			  					<option value="" selected disabled>Por favor, seleccione</option>
+			  					@foreach ($radios as $radio)
+		                          <option value="{{ $radio->id_radio }}">{{ $radio->serie." ".$radio->display}}</option>
+		                        @endforeach
+		                    </select>
+				  		</div>
+
+				  		<div class="col-sm-6">
+				  			<p class="help-block margin-bottom-cero"><small>Eq. AVL:</small></p>
+			  				<select class="form-control campo" name="avl" id="avl" data-val="avl">
+			  					<option value="" selected disabled>Por favor, seleccione</option>
+			  					@foreach ($avls as $avl)
+		                          <option value="{{ $avl->id_avl }}">{{ $avl->serie." ".$avl->datatrack }}</option>
+		                        @endforeach
+		                    </select>
+				  		</div>				  		
+				  	</div>
+
+				  	<div class="form-group">
+				  		<div class="col-sm-12">
+				  			
+				  		</div>
+				  	</div>
+
 					<div class="form-group">					
 							<div class="col-sm-12">
 								<input type="submit" value="Registrar Móvil" class="btn btn-success form-control">
