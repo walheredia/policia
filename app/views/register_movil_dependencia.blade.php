@@ -9,6 +9,13 @@
 		<h1>Asignaciones</h1>
 
 		<div class="col-md-10 col-md-offset-1 text-left">
+			@if(Session::has('ok'))
+	            <div class="alert alert-success">
+	              <button type="button" class="close" data-dismiss="alert">&times;</button>
+	                {{ Session::get('ok') }}
+	              </ul>
+	            </div>
+	        @endif
 			@if ($errors->any())
 			    <div class="alert alert-danger">
 			      <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -43,12 +50,36 @@
 		                    </select>
 	                   	</div>		  			
 				  	</div>
+				</fieldset>
+				<fieldset class="cool-fieldset">
+					<h3 class="row text-center">Móviles Asignados</h3>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<table class="table table-bordered table-hover" style="font-size: 12px;">
+								<thead>
+									<tr>
+								  		<th>ID Dependencia</th>
+								  		<th>ID Movil</th>
+					  					<th>Eliminar</th>
+									</tr>
+								</thead>
+						  		<tbody>
+						  			@foreach($movildependencias as $movildependencia)
+									<tr>
+										<td>{{ $movildependencia->id_dependencia }}</td>
+										<td>{{ $movildependencia->id_movil }}</td>
+										<td><a href="{{ action('UsuariosController@destroy', $movildependencia->id_dependencia) }}"><span class="glyphicon glyphicon-remove"></a></span></td>
+									</tr>
+									@endforeach
+						  		</tbody>	
+							</table>
+						</div>						
+					</div>
 					<div class="form-group">					
 						<div class="col-sm-12">
 							<input type="submit" value="Registrar Asignación" class="btn btn-success form-control">
 						</div>
-					</div>							  	
-
+					</div>
 				</fieldset>					
 
 			</form>
