@@ -4,7 +4,7 @@
 	public function get_nuevo(){
 
 		$dependencias = Dependencia::all();
-		$moviles = movil::all();
+		$moviles = Movil::all();
 		
 		$movildependencias = DB::table('dependencias_moviles')
 		->join('dependencias', 'dependencias_moviles.id_dependencia', '=', 'dependencias.id_dependencia')
@@ -33,6 +33,7 @@
 			Input::flash();
 			return Redirect::back()->withInput()->withErrors($validar);
 		}
+		
 		else
 		{
 			$movdep = new MovilDependencia;
