@@ -4,7 +4,7 @@
 	public function get_nuevo(){
 		$modelos = ModeloMovil::all();
 		$radios = Radio::all();
-		$avls = AVL::all();
+		$avls = Avl::all();
 		return View::make('register_movil')->with('modelos', $modelos)
 											->with('radios', $radios)
 											->with('avls', $avls);
@@ -67,7 +67,7 @@
 		}
 		$modelos = ModeloMovil::all();
 		$radios = Radio::all();
-		$avls = AVL::all();
+		$avls = Avl::all();
 		return View::make('edit_movil')->with('movil', $movil)
 											->with('modelos', $modelos)
 											->with('radios', $radios)
