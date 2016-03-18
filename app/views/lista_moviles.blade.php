@@ -31,8 +31,8 @@
 			 		<td>{{ $movil->oi }}</td>
 			 		<td>{{ $movil->dominio }}</td>
 			 		<td>{{ $movil->modelo }}</td>
-			 		<td><a href="{{ action('UsuariosController@getEditUsuario', $movil->id_movil) }}"><span class="glyphicon glyphicon-pencil"></a></span></td>
-					<td><a href="{{ action('UsuariosController@destroy', $movil->id_movil) }}" <span class="glyphicon glyphicon-remove"></span></a></td>
+			 		<td><a href="{{ action('MovilesController@getEditMovil', $movil->id_movil) }}"><span class="glyphicon glyphicon-pencil"></a></span></td>
+					<td><a href="{{ action('MovilesController@destroy', $movil->id_movil) }}" <span class="glyphicon glyphicon-remove"></span></a></td>
           </a></td>
 				</tr>
 				@endforeach

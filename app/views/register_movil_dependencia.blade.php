@@ -58,16 +58,20 @@
 							<table class="table table-bordered table-hover" style="font-size: 12px;">
 								<thead>
 									<tr>
-								  		<th>ID Dependencia</th>
-								  		<th>ID Movil</th>
+								  		<th>Nombre Dependencia</th>
+								  		<th>Dirección Dependencia</th>
+								  		<th>Domino Móvil</th>
+								  		<th>Modelo Móvil</th>
 					  					<th>Eliminar</th>
 									</tr>
 								</thead>
 						  		<tbody>
 						  			@foreach($movildependencias as $movildependencia)
 									<tr>
-										<td>{{ $movildependencia->id_dependencia }}</td>
-										<td>{{ $movildependencia->id_movil }}</td>
+										<td>{{ $movildependencia->nombre }}</td>
+										<td>{{ $movildependencia->direccion }}</td>
+										<td>{{ $movildependencia->dominio }}</td>
+										<td>{{ $movildependencia->modelo }}</td>
 										<td><a href="{{ action('UsuariosController@destroy', $movildependencia->id_dependencia) }}"><span class="glyphicon glyphicon-remove"></a></span></td>
 									</tr>
 									@endforeach

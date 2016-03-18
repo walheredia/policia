@@ -29,8 +29,8 @@
 					<td>{{ $dependencia->nombre }}</td>
 			 		<td>{{ $dependencia->direccion }}</td>
 			 		<td>{{ $dependencia->telefono }}</td>
-			 		<td><a href="{{ action('UsuariosController@getEditUsuario', $dependencia->id_dependencia) }}"><span class="glyphicon glyphicon-pencil"></a></span></td>
-					<td><a href="{{ action('UsuariosController@destroy', $dependencia->id_dependencia) }}" <span class="glyphicon glyphicon-remove"></span></a></td>
+			 		<td><a href="{{ action('DependenciasController@getEditDependencia', $dependencia->id_dependencia) }}"><span class="glyphicon glyphicon-pencil"></a></span></td>
+					<td><a href="{{ action('DependenciasController@destroy', $dependencia->id_dependencia) }}" <span class="glyphicon glyphicon-remove"></span></a></td>
           </a></td>
 				</tr>
 				@endforeach

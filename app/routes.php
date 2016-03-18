@@ -22,6 +22,8 @@ Route::get('lista_usuarios', 'UsuariosController@all_users');
 Route::get('register_movil', 'MovilesController@get_nuevo');
 Route::post('register_movil', 'MovilesController@post_nuevo');
 Route::get('lista_moviles', 'MovilesController@all_moviles');
+Route::get('lista_moviles{id}', 'MovilesController@destroy');
+Route::post('edit_movil', 'MovilesController@update');
 
 //Equipos AVL
 Route::get('register_avl', 'EquiposAVLController@get_nuevo');
@@ -32,6 +34,9 @@ Route::get('lista_avls', 'EquiposAVLController@all_avls');
 Route::get('register_dependencia', 'DependenciasController@get_nuevo');
 Route::post('register_dependencia', 'DependenciasController@post_nuevo');
 Route::get('lista_dependencias', 'DependenciasController@all_dependencias');
+Route::get('lista_dependencias{id}', 'DependenciasController@destroy');
+Route::get('edit_dependencia{id}', 'DependenciasController@getEditDependencia')->where('id', '[0-9]+');
+Route::post('edit_dependencia', 'DependenciasController@update');
 
 //Eqipos Radio
 Route::get('register_radio', 'EquiposRadioController@get_nuevo');
@@ -40,7 +45,7 @@ Route::get('lista_radios', 'EquiposRadioController@all_radios');
 
 Route::get('register_movil_dependencia', 'MovilDependenciaController@get_nuevo');
 Route::post('register_movil_dependencia', 'MovilDependenciaController@post_nuevo');
-
+Route::get('edit_movil{id}', 'MovilesController@getEditMovil')->where('id', '[0-9]+');
 
 /*Rutas privadas solo para usuarios autenticados*/
 Route::group(['before' => 'auth'], function()
