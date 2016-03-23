@@ -12,12 +12,12 @@
 	public function post_nuevo() {
 		$inputs = Input::all();
 		$reglas = array(
-			'ro' => 'required|max:50', 
-			'oi' => 'required|max:50',
-			'dominio' => 'required|max:50',
+			'ro' => 'required|max:50|unique:moviles,ro', 
+			'oi' => 'required|max:50|unique:moviles,oi',
+			'dominio' => 'required|max:50|unique:moviles,dominio',
 			'modelo' => 'required|max:50',
-			'radio' => 'required',
-			'avl' => 'required',
+			'radio' => 'unique:moviles,id_radio',
+			'avl' => 'unique:moviles,id_avl',
 		);
 		$mensajes = array(
 			'required' => 'Campo Obligatorio',
