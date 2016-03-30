@@ -1,0 +1,15 @@
+listo-> Radio y avl no son requeridos para alta de movil
+
+moviles: ro/oi/dominio (no se pueden repetir)
+
+Lista moviles: Borrar id y agregar dependencia a la que pertenece. Ordenar por dependencia, modelo(mostrar modelo no id)
+agregar menu de "Listados" -> Listado general(Mostrar todo, la raiz es la dependencia)
+
+
+
+radios: nº serie (no se puede repetir)
+avls: serie/datatrack (no se pueden repetir)
+
+el combo de dependencia solamente el nombre
+en asignaciones->movil-> mostrar 'ro/oi' dominio
+
